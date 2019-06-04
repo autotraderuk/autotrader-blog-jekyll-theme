@@ -22,6 +22,7 @@
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
+    {% feed_meta %}
     <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
 
     {% seo %}
