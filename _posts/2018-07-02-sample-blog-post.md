@@ -25,3 +25,7 @@ Cras nec enim aliquam, dignissim urna feugiat, finibus metus. Fusce felis enim, 
 Curabitur justo ex, blandit eu ex a, ullamcorper porta nisl. Ut volutpat mi eu nisi pellentesque, sit amet tincidunt sapien posuere. Vivamus rutrum, elit non ornare maximus, orci enim volutpat nisi, non porta ante nunc sed lacus. Vestibulum eu luctus felis. Curabitur semper, tortor id lacinia mollis, tortor dui scelerisque lacus, sed interdum ligula dolor sit amet mi. Vestibulum tempus ante non viverra egestas. Sed feugiat eu ante vel vulputate. Etiam id facilisis lacus. Praesent vel feugiat lectus. In consequat sem ut quam blandit euismod. Phasellus eu pellentesque mi, vitae pharetra turpis. Aenean ut gravida risus, mattis maximus neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut justo mauris, pulvinar eu tincidunt in, interdum ut lectus. Pellentesque aliquet tristique magna at vehicula.
 
 **This should be bold** whereas *this should be italic*.
+
+This should be an equation:
+
+$$ x = y^2 $$
