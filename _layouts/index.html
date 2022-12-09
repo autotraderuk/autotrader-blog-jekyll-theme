@@ -10,7 +10,7 @@ layout: default
         {% for post in paginator.posts %}
         <li>
             <h2>
-                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <a class="post-link" data-track="{{ post.title }} title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h2>
             <p>
                 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}</span>
@@ -24,7 +24,7 @@ layout: default
             {{ post.excerpt | number_of_words }}
             {% endcapture %}
             {% if excerpt_words != content_words %}
-            <p><a class="btn btn-sm btn-primary" href="{{ post.url | relative_url }}" role="button">Read more… <i class="fa fa-arrow-circle-right"></i></a>
+            <p><a class="btn btn-sm btn-primary" data-track="{{ post.title }} read more" href="{{ post.url | relative_url }}" role="button">Read more… <i class="fa fa-arrow-circle-right"></i></a>
             </p>
             {% endif %}
         </li>
@@ -34,13 +34,13 @@ layout: default
     {% if paginator.total_pages != 1 %}
     <div class="pagination">
         {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
+        <a href="{{ paginator.previous_page_path | relative_url }}" data-track="previous" class="previous">Previous</a>
         {% else %}
         <span class="previous inactive">Previous</span>
         {% endif %}
         <span class="page_number ">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+        <a href="{{ paginator.next_page_path | relative_url }}" data-track="next" class="next">Next</a>
         {% else %}
         <span class="next inactive">Next</span>
         {% endif %}

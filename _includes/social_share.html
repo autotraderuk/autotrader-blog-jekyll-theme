@@ -1,9 +1,9 @@
 <div class="social-share">
   Share:
-  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}&via={{ site.twitter.username }}&related={{ site.twitter.username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}&via={{ site.twitter.username }}&related={{ site.twitter.username }}" data-track="twitter" rel="nofollow" target="_blank" title="Share on Twitter">
     {% include icons/twitter.html %}
   </a>
-  <a href="https://facebook.com/sharer.php?u={{ page.url | absolute_url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+  <a href="https://facebook.com/sharer.php?u={{ page.url | absolute_url }}" data-track="facebook" rel="nofollow" target="_blank" title="Share on Facebook">
     {% include icons/facebook.html %}
   </a>
 </div>

@@ -14,14 +14,14 @@ layout: default
     </div>
     {% assign sortedTags = page.tags | sort %}
     {% for tag in sortedTags %}
-    <span class="tag"><a href="{{ tag | slugify | prepend: '/tags#' | relative_url }}">#{{ tag }}</a></span>
+    <span class="tag"><a href="{{ tag | slugify | prepend: '/tags#' | relative_url }}" data-track="tag {{ tag }}">#{{ tag }}</a></span>
     {% endfor %}
   </header>
 
   <article class="post-content">
     {{ content }}
     {% include social_share.html %}
-    <span class=""></span><p>Enjoyed that? <a href="/">Read some other posts</a>.</p>
+    <span class=""></span><p>Enjoyed that? <a href="/" data-track="read other posts">Read some other posts</a>.</p>
     {% include comments.html %}
   </article>
 
@@ -54,18 +54,18 @@ layout: default
     {% endfor %}
     {% if sameTagCount > 0 %}
     <div class="related-post">
-      <a href="{{ post.url | relative_url }}">
+      <a href="{{ post.url | relative_url }}" data-track="related post {{ post.title }}">
         <strong>{{ post.title }}</strong><br>
         {{ post.date | date_to_string }}—{{ post.author }}
       </a>
         {% assign sortedTags = post.tags | sort %}
         <ul>
         {% for tag in sortedTags %}
-          <li><a href="{{ tag | slugify | prepend: '/tags#' | relative_url }}" class="related-post-tag">#{{ tag }}</a></li>
+          <li><a href="{{ tag | slugify | prepend: '/tags#' | relative_url }}" data-track="related post tag {{ tag }}" class="related-post-tag">#{{ tag }}</a></li>
         {% endfor %}
         </ul>
         <p>{{ post.excerpt | truncatewords: 50 }}</p>
-        <p><a class="btn btn-sm btn-primary" href="{{ post.url | relative_url }}" role="button">Read more… <i class="fa fa-arrow-circle-right"></i></a>
+        <p><a class="btn btn-sm btn-primary" href="{{ post.url | relative_url }}" data-track="related post read more {{ post.title }}" role="button">Read more… <i class="fa fa-arrow-circle-right"></i></a>
       </p>
     </div>
     {% endif %}
