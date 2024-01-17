@@ -27,10 +27,6 @@
         padding: 0;
     }
 
-    .menu-icon {
-        display: none;
-    }
-
     .page-link {
         color: $at-white;
         line-height: $base-line-height;
@@ -44,26 +40,6 @@
     @include media-query($on-palm) {
         line-height: 0;
         padding-top: 5px;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            min-height: 26px;
-
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-                margin-top: 2px;
-
-
-                path {
-                    fill: $at-white;
-                }
-            }
-        }
 
         .trigger {
             clear: both;
