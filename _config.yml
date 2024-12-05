@@ -24,8 +24,6 @@ paginate_path: "/page-:num/"
 
 githubdotgom:
   username: autotraderuk
-twitter:
-  username: autotraderlife # This is used by jekyll-seo-tag
 facebook:
   username: autotraderlife
   
